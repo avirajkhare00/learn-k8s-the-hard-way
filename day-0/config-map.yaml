@@ -17,6 +17,7 @@ data:
         add_header X-Frame-Options "SAMEORIGIN";
         add_header Content-Security-Policy "default-src 'self'";
         location / {
+          default_type text/html;
           return 200 "<h1>Hello Aviraj</h1>\n";
         }
       }
