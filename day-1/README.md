@@ -23,3 +23,11 @@ Not to cover:
 
 ## To Debug
  - why 1 pod?
+
+The replicaCount is not a standard configuration option for the Nginx Ingress Helm chart, and Nginx Ingress Controller pods are typically scaled horizontally based on demand rather than a fixed count.
+<br />
+to make more pods, do this:
+
+ - ```kubectl edit deployment <nginx-ingress-deployment-name> -n default```
+ - ```edit the replica to desired number, in my case 10. replica: 10```
+ - ```save it and you are done```
